@@ -188,8 +188,9 @@ class AccountDetailsDB {
             } else {
                 console.log('Email sent: ' + info.response);
             }
+            respond.json(verifymsg);
         });
-        respond.json(verifymsg);
+        
 
        if(input == passcode) {
 
@@ -211,11 +212,6 @@ class AccountDetailsDB {
 
     }
 
-   
-    
-
-    
-
 
 }
 function generatePassword() {
@@ -226,10 +222,6 @@ function generatePassword() {
         retVal += charset.charAt(Math.floor(Math.random() * n));
     }
     return retVal;
-}
-
-function sendVerificationEmail() {
-
 }
 
 
