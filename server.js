@@ -3,9 +3,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 var app = express();
-var host = "192.168.1.94";
-var port = 8080;
-var startPage = "index.html";
+var host = "192.168.1.73";
+var port = 25565;
+var startPage = "home.html";
 
 app.use(express.static("./public"));
 app.use(bodyParser.urlencoded({ extended: true }));

@@ -1,0 +1,52 @@
+<head>
+    <link href="css/modal.css.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<div class="modal fade" id="activateaccount" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-center">
+                <h5 class="modal-title text-light" id="deactivate">Forgot Password</h5>
+            </div>
+            <div class="modal-body">
+                <form onsubmit="sendActivateCode();return false">
+                    <h6 class="text-uppercase font-weight-light text-secondary orange edit">
+                      Enter your email here and we will send you an activation code
+                    </h6>
+                    <div class="row">
+                      <div class="col">
+                        <div class="form-group">
+                          <label class="pw">Email</label>
+                          <input id="activateemail" class="form-control pw" type="email" placeholder="Email Address">
+                        </div>
+                      </div>
+                    </div>
+                <div class="row">
+                  <div class="col d-flex justify-content-end">
+                    <button class="btn btn-primary savechanges" type="submit">Send Email</button>
+                  </div>
+                </div>
+              </form>
+              <form onsubmit="activateAccount();return false">
+                <h6 class="text-uppercase font-weight-light text-secondary orange edit">
+                    Enter your activation code here to activate your account
+                  </h6>
+                <div class="row">
+                    <div class="col">
+                      <div class="form-group">
+                        <label class="pw">Activation Code</label>
+                        <input id="activatecode" class="form-control pw" type="text" placeholder="Activation Code">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col d-flex justify-content-end">
+                      <button class="btn btn-primary savechanges" type="submit">Activate Account</button>
+                    </div>
+                  </div>
+              </form>
+            </div>
+        </div>
+    </div>
+</div>

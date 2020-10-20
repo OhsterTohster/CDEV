@@ -1,0 +1,9 @@
+.navbarpic {
+    width: 4em!important;
+    height: 4em!important;
+    border-radius: 50%!important;
+    border-top-left-radius: 50% !important;
+    border-top-right-radius: 50% !important;
+    border-bottom-right-radius: 50% !important;
+    border-bottom-left-radius: 50% !important;
+  }

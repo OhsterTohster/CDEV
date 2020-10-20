@@ -187,3 +187,17 @@ input[type="submit"] {
   font-size: 2em;
 }
 
+.active-pink-4 input[type=text] {
+  border: 1px solid #F4A633;
+  box-shadow: 0 0 0 1px #F4A633;
+  width: 100rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  }
+
+.active-pink-3 input[type=text] {
+  border: 1px solid #F4A633;
+  box-shadow: 0 0 0 1px  #F4A633;
+  width: 20em;
+  }
+

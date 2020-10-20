@@ -4,15 +4,22 @@
   "description": "",
   "main": "app_server.js",
   "scripts": {
+    "devStart": "nodemon server.js",
+    "bruh": "nodemon serverlocal.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "async": "^3.1.1",
     "body-parser": "^1.18.2",
     "bootstrap": "^4.0.0-alpha.6",
     "express": "^4.15.4",
     "mysql": "^2.14.1",
-    "node-datetime": "^2.0.3"
+    "node-datetime": "^2.0.3",
+    "nodemailer": "^6.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }

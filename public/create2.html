@@ -1,0 +1,253 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Nice Anot?">
+
+    <title>Nice Anot?</title>
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/restaurant.js"></script>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/all.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet" type="text/css">
+    <link href="css/creative.css" rel="stylesheet" type="text/css">
+    <link href="css/login.css" rel="stylesheet">
+    <script src="js/createaccount.js"></script>
+    <script src="js/strength.js"></script>
+    <link href="./css/style.css.css" rel="stylesheet" media="screen">
+    <link href="./css/mobile-style.css" rel="stylesheet" media="screen">
+    <link href="./css/create2.css" rel="stylesheet" media="screen">
+    <script src="js/login.js"></script>
+
+    <!-- reCaptcha v2 javascript link-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+
+
+<body onload="yesLogin()">
+    <!--Navbar -->
+  <nav class="mb-1 navbar fixed-top navbar-expand-lg navbar-dark secondary-color lighten-1 ">
+    <a class="navbar-brand" href="home.html"><img class="logo" src="img/logo.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
+      aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link, navbartext" href="home.html">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link, navbartext" href="search.html">Restaurants</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link, navbartext" href="discord.html">Discord</a>
+        </li>
+        <li class="translate">
+          <div id="google_translate_element"></div>
+
+          <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+            }
+          </script>
+
+          <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item avatar dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <img src="https://cdn.discordapp.com/attachments/656394258789433344/677158161039228948/iStock-476085198.png" class="rounded-circle z-depth-0" alt="avatar image" id="profilepic">
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+            aria-labelledby="navbarDropdownMenuLink-55">
+            <a id="profile" class="dropdown-item" href="profile.html">Profile</a>
+            <a id="login" class="dropdown-item" href="login.html">Log In</a>
+            <a id="logout" class="dropdown-item" onclick="logOut()">Log Out</a>
+
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    <!--/.Navbar -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                    <div class="card card-signin my-5">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Add Restaurant</h5>
+                            <form class="form-signin" onsubmit="addRestaurant();return false">
+                                <div class="form-label-group">
+                                    <input id="inputrestname" class="form-control" placeholder="Restaurant Name"
+                                        required autofocus>
+                                    <label for="inputrestname">Restaurant Name</label>
+                                </div>
+                                <div class="form-label-group">
+                                    <input id="inputrestaddress" class="form-control" placeholder="Restaurant Address"
+                                        required autofocus>
+                                    <label for="inputrestaddress">Restaurant Address</label>
+                                </div>
+                                <div class="form-label-group">
+                                    <input type="tel" id="inputcontactnumber" class="form-control"
+                                        placeholder="Contact Number" required autofocus>
+                                    <label for="inputcontactnumber">Contact Number</label>
+                                </div>
+                                <div>
+                                    <h5 class="card-title text-center pictext">Add Picture</h5>
+                                    <div class="dropzone">
+                                        <div class="info"></div>
+                                    </div>
+                                    <script type="text/javascript" src="./js/imgur.js"></script>
+                                    <script type="text/javascript" src="./js/upload.js"></script>
+                                </div>
+                                <h5 class="card-title text-center">Please enter your restaurant's opening hours in this
+                                    format: <br>Eg. 7AM - 9PM<br> 4PM - 1AM <br>Closed<br>Open 24 Hours</h5>
+                                <div class="form-label-group">
+                                    <input id="inputmonday" class="form-control" placeholder="Opening Hours - Monday"
+                                        required autofocus>
+                                    <label for="inputmonday">Opening Hours - Monday</label>
+                                </div>
+                                <div class="form-label-group">
+                                    <input id="inputtuesday" class="form-control" placeholder="Opening Hours - Tuesday"
+                                        required autofocus>
+                                    <label for="inputtuesday">Opening Hours - Tuesday</label>
+                                </div>
+                                <div class="form-label-group">
+                                    <input id="inputwednesday" class="form-control"
+                                        placeholder="Opening Hours - Wednesday" required autofocus>
+                                    <label for="inputwednesday">Opening Hours - Wednesday</label>
+                                </div>
+                                <div class="form-label-group">
+                                    <input id="inputthursday" class="form-control"
+                                        placeholder="Opening Hours - Thursday" required autofocus>
+                                    <label for="inputthursday">Opening Hours - Thursday</label>
+                                </div>
+                                <div class="form-label-group">
+                                    <input id="inputfriday" class="form-control" placeholder="Opening Hours - Friday"
+                                        required autofocus>
+                                    <label for="inputfriday">Opening Hours - Friday</label>
+                                </div>
+                                <div class="form-label-group">
+                                    <input id="inputsaturday" class="form-control"
+                                        placeholder="Opening Hours - Saturday" required autofocus>
+                                    <label for="inputsaturday">Opening Hours - Saturday</label>
+                                </div>
+                                <div class="form-label-group">
+                                    <input id="inputsunday" class="form-control" placeholder="Opening Hours - Sunday"
+                                        required autofocus>
+                                    <label for="inputsunday">Opening Hours - Sunday</label>
+                                </div>
+                                <h5 class="card-title text-center">Please Select your categories</h5>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="custom-control custom-checkbox mb-3">
+                                                <input type="checkbox" class="custom-control-input"
+                                                    placeholder="Chinese" id="chinese" value="Chinese">
+                                                <label class="custom-control-label" for="chinese">Chinese</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="custom-control custom-checkbox mb-3">
+                                                <input type="checkbox" class="custom-control-input" placeholder="Halal"
+                                                    id="halal" value="Halal">
+                                                <label class="custom-control-label" for="halal">Halal</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="custom-control custom-checkbox mb-3">
+                                                <input type="checkbox" class="custom-control-input" placeholder="Malay"
+                                                    id="malay" value="Malay">
+                                                <label class="custom-control-label" for="malay">Malay</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="custom-control custom-checkbox mb-3">
+                                                <input type="checkbox" class="custom-control-input" placeholder="Indian"
+                                                    id="indian" value="Indian">
+                                                <label class="custom-control-label" for="indian">Indian</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="custom-control custom-checkbox mb-3">
+                                                <input type="checkbox" class="custom-control-input"
+                                                    placeholder="Japanese" id="japanese" value="Japanese">
+                                                <label class="custom-control-label" for="japanese">Japanese</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="custom-control custom-checkbox mb-3">
+                                                <input type="checkbox" class="custom-control-input" placeholder="Korean"
+                                                    id="korean" value="Korean">
+                                                <label class="custom-control-label" for="korean">Korean</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="custom-control custom-checkbox mb-3">
+                                                <input type="checkbox" class="custom-control-input"
+                                                    placeholder="Western" id="western" value="Western">
+                                                <label class="custom-control-label" for="western">Western</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="custom-control custom-checkbox mb-3">
+                                                <input type="checkbox" class="custom-control-input"
+                                                    placeholder="Italian" id="italian" value="Italian">
+                                                <label class="custom-control-label" for="italian">Italian</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="custom-control custom-checkbox mb-3">
+                                                <input type="checkbox" class="custom-control-input" placeholder="Local"
+                                                    id="local" value="Local">
+                                                <label class="custom-control-label" for="local">Local</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="custom-control custom-checkbox mb-3">
+                                                <input type="checkbox" class="custom-control-input" placeholder="Thai"
+                                                    id="thai" value="Thai">
+                                                <label class="custom-control-label" for="thai">Thai</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="g-recaptcha" data-sitekey="6LfCnsgUAAAAANhmZbPWU3DCyf8DDEs2Trb2XbpH"></div>
+                                <br>
+                                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">
+                                    Add Restaurant
+                                </button>
+
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>

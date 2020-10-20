@@ -2,17 +2,21 @@
 
 const express = require("express");
 const routeAccountDetails = require('./public/routes/routeAccountDetails')
+const routeRestaurants = require('./public/routes/routeRestaurants')
+const routeReview = require('./public/routes/routeReview')
 const bodyParser = require("body-parser");
 var app = express();
 var host = "127.0.0.1";
 var port = 8080;
-var startPage = "index.html";
+var startPage = "home.html";
 
 app.use(express.static("./public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 routeAccountDetails.routeAccountDetails(app);
+routeRestaurants.routeRestaurants(app);
+routeReview.routeReview(app);
 
 function gotoIndex(req, res) {
     console.log(req.params);

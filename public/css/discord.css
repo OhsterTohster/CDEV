@@ -1,0 +1,28 @@
+
+.logo {
+    width: 4em;
+    height: 4em;
+  }
+  #profilepic {
+    width: 4em;
+    height: 4em;
+  }
+  .navbartext {
+    color: white;
+    margin-left: 2em;
+  }
+  .navbar-dark  {
+    background-color:  #000000;
+    
+  }
+ section {
+     padding-bottom: 0em!important;
+ }
+ .navbar {
+  
+}
+html,body
+{
+    cursor: url("https://cdn.discordapp.com/attachments/607251188152401989/669401109751660554/DNnNuawUMAAU4vq.png"), auto;
+
+}

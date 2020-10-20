@@ -1,0 +1,166 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Nice Anot?">
+
+    <title>Nice Anot?</title>
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/back.js"></script>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/all.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet" type="text/css">
+    <link href="css/creative.css" rel="stylesheet" type="text/css">
+    <link href="css/login.css" rel="stylesheet">
+    <script src="js/createaccount.js"></script>
+    <script src="js/strength.js"></script>
+    <script src="js/login.js"></script>
+    <!-- reCaptcha v2 javascript link-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+
+</head>
+
+
+
+<body onload="yesLogin()">
+    <!--Navbar -->
+    <!--Navbar -->
+  <nav class="mb-1 navbar fixed-top navbar-expand-lg navbar-dark secondary-color lighten-1 ">
+    <a class="navbar-brand" href="home.html"><img class="logo" src="img/logo.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
+      aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link, navbartext" href="home.html">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link, navbartext" href="search.html">Restaurants</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link, navbartext" href="discord.html">Discord</a>
+        </li>
+        <li class="translate">
+          <div id="google_translate_element"></div>
+
+          <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+            }
+          </script>
+
+          <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item avatar dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <img src="https://cdn.discordapp.com/attachments/656394258789433344/677158161039228948/iStock-476085198.png" class="rounded-circle z-depth-0" alt="avatar image" id="profilepic">
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+            aria-labelledby="navbarDropdownMenuLink-55">
+            <a id="profile" class="dropdown-item" href="profile.html">Profile</a>
+            <a id="login" class="dropdown-item" href="login.html">Log In</a>
+            <a id="logout" class="dropdown-item" onclick="logOut()">Log Out</a>
+
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    <!--/.Navbar -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                    <div class="card card-signin my-5">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Create Account</h5>
+
+
+                            <form onsubmit="createAccount();return false" >
+                               
+                                <div class="form-label-group">
+                                    <input id="inputUsername" class="form-control" placeholder="Username" required
+                                        autofocus>
+                                    <label for="inputUsername">Username</label>
+                                </div>
+                                <div class="form-label-group">
+                                    <input id="inputName" class="form-control" placeholder="Full Name" required
+                                        autofocus>
+                                    <label for="inputName">Name</label>
+                                </div>
+                                <div class="form-label-group">
+                                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
+                                        required autofocus>
+                                    <label for="inputEmail">Email address</label>
+                                </div>
+
+
+                                <div class="form-label-group">
+                                    <input type="password" id="inputPassword" class="form-control"
+                                        placeholder="Password" required>
+                                    <label for="inputPassword">Password</label>
+
+
+
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input type="checkbox" onclick="showPassword()" class="custom-control-input"
+                                            id="showPassword1">
+                                        <label class="custom-control-label" for="showPassword1">Show Password</label>
+                                    </div>
+                                </div>
+                                <div class="form-label-group">
+                                    <input id="inputNumber" type="tel" class="form-control" placeholder="Mobile Number" required
+                                        autofocus>
+                                    <label for="inputNumber">Mobile Number</label>
+                                </div>
+                                <div class="form-label-group">
+                                    <input id="inputAddress1" class="form-control" placeholder="Address Line 1" required
+                                        autofocus>
+                                    <label for="inputAddress1">Address Line 1</label>
+                                </div>
+                                <div class="form-label-group">
+                                    <input id="inputAddress2" class="form-control" placeholder="Address Line 2" required
+                                        autofocus>
+                                    <label for="inputAddress2">Address Line 2</label>
+                                </div>
+                                <div class="form-label-group">
+                                    <input id="inputPostalCode" class="form-control" placeholder="Postal Code" required
+                                        autofocus>
+                                    <label for="inputPostalCode">Postal Code</label>
+                                </div>
+                                <div class="form-label-group">
+                                    <input id="inputGender" class="form-control" placeholder="Gender" required
+                                        autofocus>
+                                    <label for="inputGender">Gender</label>
+                                </div>
+                                <div class="form-group">
+                                    <div id='html_element'></div>
+                                </div>
+                                <br>
+                                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">
+                                    Create Account
+                                </button>
+
+                            </form>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>

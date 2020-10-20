@@ -1,0 +1,221 @@
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #1C1719;
+
+}
+.logo {
+    width: 4em;
+    height: 4em;
+  }
+  #profilepic {
+    width: 4em;
+    height: 4em;
+  }
+  .navbartext {
+    color: white;
+    margin-left: 2em;
+  }
+  .navbar-dark  {
+    background-color:  #000000;
+    
+  }
+  .navbar {
+    width: 100%;
+  }
+  header {
+    padding: .4rem 0;
+    border-bottom: 1px solid #e9e9e9;
+    box-shadow: 0px 0px 6px rgba(0,0,0,.05);
+}
+
+.chart {
+    position: relative;
+    text-align: center;
+}
+
+.chart canvas {
+    display: block;
+    margin: 0px auto;
+}
+
+.chart span {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    top: 50%;
+    margin-top: -12px;
+    color: #999;
+}
+.mt-0 {
+  padding-top: 2em;
+}
+.white {
+  color: white!important;
+}
+.orange {
+  color: #F4A633!important;
+}
+.review {
+  border-bottom: 1.5px solid white;
+  width: 100%;
+}
+.smol {
+  border: 1.5px solid white;
+  color: white;
+  margin-top: 5em;
+}
+.inputbox {
+  margin-top: 1em;
+}
+.label {
+  margin-top: 1em;
+  color: white;
+}
+.left {
+  height: 10em;
+}
+.form-group>label {
+ color: white!important;
+}
+.upload {
+  width: 5em!important;
+}
+
+.back {
+  background-image: url('/public/img/back.png');
+}
+html,body
+{
+    cursor: url("https://cdn.discordapp.com/attachments/607251188152401989/669401109751660554/DNnNuawUMAAU4vq.png"), auto;
+
+}
+.savechanges {
+  margin-right: 18em!important;
+  margin-top: 5em!important;
+}
+
+
+/* Imgur Upload Style */
+
+body.loading .loading-modal {
+    display: block
+}
+
+.title {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.dropzone {
+    border: 4px dashed #ccc;
+    height: 200px;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 4em;
+    max-width: 100%;
+}
+
+.info {
+    margin-top: 11%;
+}
+
+.dropzone p {
+    /*height: 100%;*/
+    /*line-height: 200px;*/
+    margin: 0%;
+    text-align: center;
+    width: 100%
+}
+
+.input {
+    height: 100%;
+    left: 0;
+    outline: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.status {
+    border-radius: 5px;
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-url {
+    width: 100%;
+}
+
+.dropzone.dropzone-dragging {
+    border-color: #000
+}
+
+.loading-modal {
+    background-color: rgba(255, 255, 255, .8);
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%
+}
+
+.loading-table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+
+.img {
+    width: 100%;
+}
+
+.zonetext {
+    color: white!important;
+}
+.edit {
+  margin-left: 0em;
+  text-align: center;
+}
+.submitbutton {
+  margin-left: 19em;
+  max-width: 100%;
+}
+.pw {
+  width: 50%;
+  margin-left: 11em;
+}
+
+.fade.in {
+  opacity: 1 !important;
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0) !important;
+  -o-transform: translate(0, 0) !important;
+  transform: translate(0, 0) !important;
+}
+.modal-backdrop.in {
+  opacity: 0.5 !important;
+}
+.sendcode {
+  margin-left: 19.5em;
+}
+.center {
+  text-align: center;
+  color: white;
+}
+.verify {
+  margin-right: 15em!important;
+  margin-top: 2em!important;
+}

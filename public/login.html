@@ -1,0 +1,126 @@
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nice Anot?">
+
+  <title>Nice Anot?</title>
+  <script src="jquery/jquery-3.4.1.min.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <link href="css/home.css" rel="stylesheet" type="text/css">
+  <link href="css/creative.css" rel="stylesheet" type="text/css">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/all.css" rel="stylesheet">
+  <link href="css/login.css" rel="stylesheet">
+  <script src="js/login.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+
+</head>
+
+<!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
+
+<body onload="yesLogin()">
+  <div w3-include-html="forgotpassword.html"></div>
+  <div w3-include-html="activateaccount.html"></div>
+  <!--Navbar -->
+  <nav class="mb-1 navbar fixed-top navbar-expand-lg navbar-dark secondary-color lighten-1 ">
+    <a class="navbar-brand" href="home.html"><img class="logo" src="img/logo.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
+      aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link, navbartext" href="home.html">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link, navbartext" href="search.html">Restaurants</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link, navbartext" href="discord.html">Discord</a>
+        </li>
+        <li class="translate">
+          <div id="google_translate_element"></div>
+
+          <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+            }
+          </script>
+
+          <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item avatar dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <img src="https://cdn.discordapp.com/attachments/656394258789433344/677158161039228948/iStock-476085198.png" class="rounded-circle z-depth-0" alt="avatar image" id="profilepic">
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg-right dropdown-secondary"
+            aria-labelledby="navbarDropdownMenuLink-55">
+            <a id="profile" class="dropdown-item" href="profile.html">Profile</a>
+            <a id="login" class="dropdown-item" href="login.html">Log In</a>
+            <a id="logout" class="dropdown-item" onclick="logOut()">Log Out</a>
+
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Sign In</h5>
+            <form class="form-signin" onsubmit="checkLogin();return false">
+              <div class="form-label-group">
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <label for="inputEmail">Email address</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <label for="inputPassword">Password</label>
+              </div>
+
+              
+              <button class="btn btn-lg btn-primary btn-block text-uppercase orangebutton" type="submit">Sign in</button>
+            </form>
+            <div class="row">
+              <div class="col-md-6">
+                <a class="orangetext underline" data-toggle="modal" data-target="#forgotpw">Forgot Password</a>
+              </div>
+              <div class="col-md-6">
+                <a class="orangetext underline" data-toggle="modal" data-target="#activateaccount">Activate Account</a>
+              </div>
+            </div>
+           
+  
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="js/w3.js"></script>
+<script>
+    //to bring in other HTML on the fly into this page
+    w3.includeHTML();
+</script>
+  </body>

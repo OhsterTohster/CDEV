@@ -6,6 +6,8 @@ class RestaurantInfo {
      this.name = name;
      this.contact_number = contact_number;
      this.restaurant_address = restaurant_address;
+     this.image_url = image_url;
+     this.average_rating = average_rating;
     }
     //put the get methods here
     
@@ -21,7 +23,7 @@ class RestaurantInfo {
         return this.contact_number;
     }
 
-    get restaurant_address() {
+    getRestaurantAddress() {
         return this.restaurant_address;
     }
 
@@ -32,5 +34,31 @@ class RestaurantInfo {
     getAverageRating() {
         return this.average_rating;
     }
+
+    setRestaurantId() {
+        this.restaurant_id = this.restaurant_id;
+    }
+
+    setName() {
+        this.name = name;
+    }
+
+    setContactNumber() {
+        this.contact_number = contact_number;
+    }
+
+    setRestaurantAddress() {
+        this.restaurant_address = restaurant_address;
+    }
+
+    setImageUrl() {
+        this.image_url = image_url;
+    }
+
+    setAverageRating() {
+        this.average_rating = average_rating;
+    }
+
+
 }
 module.exports = RestaurantInfo;
